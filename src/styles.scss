@@ -1,2 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import '~@angular/material/theming';
+@import "themes.scss";
+
+@mixin custom-components-theme($theme) {
+
+}
+
+.arizona-theme{
+  @include angular-material-theme($arizona-theme);
+  @include custom-components-theme($arizona-theme);
+}
+
+.beach-theme{
+  @include angular-material-theme($beach-theme);
+  @include custom-components-theme($beach-theme);
+}
+
+.corp-theme{
+  @include angular-material-theme($corp-theme);
+  @include custom-components-theme($corp-theme);
+}
+
+.lush-theme{
+  @include angular-material-theme($lush-theme);
+  @include custom-components-theme($lush-theme);
+}
+
+.pirate-theme{
+  @include angular-material-theme($pirate-theme);
+  @include custom-components-theme($pirate-theme);
+}
+
+.tropical-theme{
+  @include angular-material-theme($tropical-theme);
+  @include custom-components-theme($tropical-theme);
+}
+
+* { box-sizing:border-box }
+body{ margin: 0
+}
