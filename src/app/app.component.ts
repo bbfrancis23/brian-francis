@@ -9,7 +9,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 })
 export class AppComponent {
 
-  title = 'BrianFrancisNet';
+  title = 'Brian Francis';
 
   constructor(
     private overlayContainer: OverlayContainer
