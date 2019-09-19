@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ThemeDialogComponent } from './theme-dialog/theme-dialog.component';
 
 @NgModule({
-  declarations: [ThemeDialogComponent],
+  declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  exports: [ThemeDialogComponent]
+  exports: []
 })
 export class ThemeModule { }

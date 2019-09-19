@@ -1,6 +1,31 @@
-<button mat-fab aria-label="Settings">
-  <mat-icon color="primary">settings</mat-icon>
+<button mat-fab aria-label="Theme Settings" [mat-menu-trigger-for]="themesMenu" >
+  <mat-icon color="primary">invert_colors</mat-icon>
 </button>
+
+<mat-menu #themesMenu>
+  <mat-grid-list cols="2">
+    <mat-grid-tile>
+      <div class="active">
+        <div class="moon"></div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="theme-tile">
+        <div class="moon"></div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div>
+        <div class="moon"></div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div >
+        <div class="moon"></div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-menu>
 <!--<div >-->
 <!--  <div class="active">-->
 <!--    <div class="moon"></div>-->

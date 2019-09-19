@@ -12,10 +12,16 @@ export class AppComponent {
   title = 'Brian Francis';
 
   constructor(
-    private overlayContainer: OverlayContainer
+    private overlayContainer: OverlayContainer,
   ) {
     this.overlayContainer.getContainerElement().classList.add('pirate-theme');
     document.body.classList.add('pirate-theme');
+
+
+  }
+
+  openThemeDialog() {
+
   }
 
 }
