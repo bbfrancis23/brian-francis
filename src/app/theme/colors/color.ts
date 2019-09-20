@@ -52,7 +52,7 @@
 //     return this;
 //   }
 // }
-
+// some comments
 export const MaterialColorPalettes = {
   Red: {
       50 : {hex : '#FFEBEE'},
