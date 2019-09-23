@@ -2,10 +2,15 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 @import '~@angular/material/theming';
+@include mat-core();
+
 @import "themes.scss";
 
-@mixin custom-components-theme($theme) {
+// custom component theming
+@import 'app/app.theme.scss';
 
+@mixin custom-components-theme($theme) {
+  @include  app-theme($theme);
 }
 
 .arizona-theme{
@@ -13,12 +18,7 @@
   @include custom-components-theme($arizona-theme);
 }
 
-.beach-theme{
-  @include angular-material-theme($beach-theme);
-  @include custom-components-theme($beach-theme);
-}
-
-.corp-theme{
+.corporate-theme{
   @include angular-material-theme($corp-theme);
   @include custom-components-theme($corp-theme);
 }
@@ -33,11 +33,50 @@
   @include custom-components-theme($pirate-theme);
 }
 
-.tropical-theme{
-  @include angular-material-theme($tropical-theme);
-  @include custom-components-theme($tropical-theme);
+* { box-sizing:border-box }
+body, html{
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
+  color: #666;
 }
 
-* { box-sizing:border-box }
-body{ margin: 0
+span.large {
+
+
+    color: transparent;
+    font-size: 100px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+
+.pimg1, .pimg2, .pimg3{
+  position: relative;
+  opacity: 0.70;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+
+.ptext{
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border{
+  //background-color: #111;
+  //color: #fff;
+  //padding: 20px;
 }

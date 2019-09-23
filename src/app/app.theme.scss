@@ -1,0 +1,66 @@
+@import '~@angular/material/theming';
+
+@mixin app-theme($theme) {
+
+  // theme variables
+  $theme-foreground: map-get($theme, foreground);
+
+  // app-theme variables
+  $app-button-spacing: 20px;
+  $theme-tile-size: 50px;
+  $swatch-radius: 25px;
+  $swatch-hover-growth: 1%;
+
+   div.page-wrapper{
+     height: 100%;
+   }
+
+  button.settings-button{
+    position: fixed;
+    top: $app-button-spacing;
+    right: $app-button-spacing;
+    z-index: 1;
+  }
+
+  .theme-tile{
+    width: $theme-tile-size;
+    height: $theme-tile-size;
+    padding: 5px;
+  }
+
+  .theme-tile-active{
+    @extend .theme-tile;
+    border: 2px solid mat-color($theme-foreground, text);
+    //-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+    border-radius: $swatch-radius;
+  }
+
+  .swatch {
+    width: 100%;
+    height: 100%;
+    border-radius: $swatch-radius;
+  }
+
+  .swatch:hover{
+    width: 100% + $swatch-hover-growth;
+    height: 100% + $swatch-hover-growth;
+    border-radius: $swatch-radius;
+  }
+
+  // paralax
+  .pimg1{
+    background-image: url('./assets/parallax/corporate-1-parallax.jpg');
+    min-height: 100%;
+  }
+  .pimg2{
+    background-image: url('./assets/parallax/corporate-2-parallax.jpg');
+    min-height: 400px;
+  }
+  .pimg3{
+    background-image: url('./assets/parallax/corporate-3-parallax.jpg');
+    min-height: 400px;
+  }
+
+
+}

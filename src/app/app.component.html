@@ -1,34 +1,63 @@
-<button mat-fab aria-label="Theme Settings" [mat-menu-trigger-for]="themesMenu" >
-  <mat-icon color="primary">invert_colors</mat-icon>
-</button>
 
-<mat-menu #themesMenu>
-  <mat-grid-list cols="2">
-    <mat-grid-tile>
-      <div class="active">
-        <div class="moon"></div>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div class="theme-tile">
-        <div class="moon"></div>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div>
-        <div class="moon"></div>
-      </div>
-    </mat-grid-tile>
-    <mat-grid-tile>
-      <div >
-        <div class="moon"></div>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</mat-menu>
-<!--<div >-->
-<!--  <div class="active">-->
-<!--    <div class="moon"></div>-->
-<!--  </div>-->
+<div class="page-wrapper">
+  <button class="settings-button" mat-fab aria-label="Theme Settings" [mat-menu-trigger-for]="themesMenu" >
+    <mat-icon >invert_colors</mat-icon>
+  </button>
+  <mat-menu #themesMenu overlapTrigger >
+    <mat-grid-list cols="2">
+      <mat-grid-tile *ngFor="let theme of themes">
+        <div class="theme-tile" [ngClass]="{'theme-tile-active': (themeService.getTheme() | async) === theme.name}" mat-menu-item role="menuitem" (click)="themeService.setTheme(theme.name)">
+          <div class="swatch" [style.background]="'linear-gradient(-45deg, '+theme.getColor('primary')+' 35%,  '+theme.getColor('accent')+' 100%)'"></div>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-menu>
 
-<!--</div>-->
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        <span class="large">Brian Francis</span>
+      </span>
+    </div>
+  </div>
+  <section class="section section-light">
+    <h2>Section One</h2>
+    <p>
+      One advanced diverted domestic sex repeated bringing you old. Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.
+    </p>
+  </section>
+  <div class="pimg2">
+    <div class="ptext">
+      <span class="border">
+        Image 2 text
+      </span>
+    </div>
+  </div>
+  <section class="section section-dark">
+    <h2>Section Two</h2>
+    <p>
+      Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.
+    </p>
+  </section>
+  <div class="pimg3">
+    <div class="ptext">
+      <span class="border">
+        Image 3 text
+      </span>
+    </div>
+  </div>
+  <section class="section section-dark">
+    <h2>Section Two</h2>
+    <p>
+      Possible procured her trifling laughter thoughts property she met way. Companions shy had solicitude favourable own. Which could saw guest man now heard but. Lasted my coming uneasy marked so should. Gravity letters it amongst herself dearest an windows by. Wooded ladies she basket season age her uneasy saw. Discourse unwilling am no described dejection incommode no listening of. Before nature his parish boy.
+    </p>
+  </section>
+  <div class="pimg1">
+    <div class="ptext">
+      <span class="border">
+        Parallax Website
+      </span>
+    </div>
+  </div>
+</div>
+

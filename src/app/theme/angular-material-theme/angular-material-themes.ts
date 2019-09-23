@@ -1,77 +1,43 @@
-// export interface Color {
-//   _id: string;
-//   _hex: string;
-// }
-//
-// export interface ColorPalette {
-//   _id: string;
-//   _colors: [Color];
-// }
-//
-// export interface MaterialColors{
-//
-// }
-//
-// export class Color implements Color {
-//   _id: string;
-//   _hex: string;
-//
-//   get id(): string {return this._id;}
-//   set id(id:string) { this._id = id;}
-//
-//   get hex(): string {return this._hex;}
-//   set hex(hex:string) { this._hex = hex;}
-//
-//   constructor(id:string, hex:string){
-//     this.id = id;
-//     this.hex = hex;
-//
-//     return this;
-//   }
-// }
-//
-// export class ColorPalette implements ColorPalette {
-//   _id: string;
-//   _colors: [Color];
-//
-//   get id(): string {return this._id;}
-//   set id(id:string) { this._id = id;}
-//
-//   get colors(): [Color] { return this._colors; }
-//   set colors(colors:[Color]) { this._colors = colors }
-// }
-//
-// export class MaterialColors {
-//
-//   _palettes: {ColorPalette};
-//
-//   get palettes(): [ColorPalette] { return this._palettes; }
-//   set palettes(palettes:[ColorPalette]) { this._palettes = palettes }
-//
-//   constructor() {
-//     return this;
-//   }
-// }
-// some comments
-export const MaterialColorPalettes = {
-  Red: {
-      50 : {hex : '#FFEBEE'},
-      100 : {hex : '#FFCDD2'},
-      200 : {hex : '#EF9A9A'},
-      300 : {hex : '#E57373'},
-      400 : {hex : '#EF5350'},
-      500 : {hex : '#F44336'},
-      600 : {hex : '#E53935'},
-      700 : {hex : '#D32F2F'},
-      800 : {hex : '#C62828'},
-      900 : {hex : '#B71C1C'},
-      A100 : {hex : '#FF8A80'},
-      A200 : {hex : '#FF5252'},
-      A400 : {hex : '#FF1744'},
-      A700 : {hex : '#D50000'},
-  },
-  Pink: {
-    50: {hex : '#FCE4EC'},
+interface MaterialColor {
+  readonly hex: string;
+}
+
+interface MaterialColorPalette {
+  readonly 50: MaterialColor;
+  readonly 100: MaterialColor;
+  readonly 200: MaterialColor;
+  readonly 300: MaterialColor;
+  readonly 400: MaterialColor;
+  readonly 500: MaterialColor;
+  readonly 600: MaterialColor;
+  readonly 700: MaterialColor;
+  readonly 800: MaterialColor;
+  readonly 900: MaterialColor;
+  readonly A100?: MaterialColor;
+  readonly A200?: MaterialColor;
+  readonly A400?: MaterialColor;
+  readonly A700?: MaterialColor;
+}
+
+const Red : MaterialColorPalette = {
+  50 : {hex : '#FFEBEE'},
+  100 : {hex : '#FFCDD2'},
+  200 : {hex : '#EF9A9A'},
+  300 : {hex : '#E57373'},
+  400 : {hex : '#EF5350'},
+  500 : {hex : '#F44336'},
+  600 : {hex : '#E53935'},
+  700 : {hex : '#D32F2F'},
+  800 : {hex : '#C62828'},
+  900 : {hex : '#B71C1C'},
+  A100 : {hex : '#FF8A80'},
+  A200 : {hex : '#FF5252'},
+  A400 : {hex : '#FF1744'},
+  A700 : {hex : '#D50000'},
+};
+
+const Pink: MaterialColorPalette = {
+  50: {hex : '#FCE4EC'},
     100 : {hex : '#F8BBD0'},
     200 : {hex : '#F48FB1'},
     300 : {hex : '#F06292'},
@@ -85,25 +51,27 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#FF4081'},
     A400 : {hex : '#F50057'},
     A700 : {hex : '#C51162'},
-  },
-  Purple: {
-    50 : {hex : '#F3E5F5'},
-    100 : {hex : '#E1BEE7'},
-    200 : {hex : '#CE93D8'},
-    300 : {hex : '#BA68C8'},
-    400 : {hex : '#AB47BC'},
-    500 : {hex : '#9C27B0'},
-    600 : {hex : '#8E24AA'},
-    700 : {hex : '#7B1FA2'},
-    800 : {hex : '#6A1B9A'},
-    900 : {hex : '#4A148C'},
-    A100 : {hex : '#EA80FC'},
-    A200 : {hex : '#E040FB'},
-    A400 : {hex : '#D500F9'},
-    A700 : {hex : '#AA00FF'},
-  },
-  DeepPurple: {
-    50 : {hex : '#EDE7F6'},
+};
+
+const Purple: MaterialColorPalette = {
+  50 : {hex : '#F3E5F5'},
+  100 : {hex : '#E1BEE7'},
+  200 : {hex : '#CE93D8'},
+  300 : {hex : '#BA68C8'},
+  400 : {hex : '#AB47BC'},
+  500 : {hex : '#9C27B0'},
+  600 : {hex : '#8E24AA'},
+  700 : {hex : '#7B1FA2'},
+  800 : {hex : '#6A1B9A'},
+  900 : {hex : '#4A148C'},
+  A100 : {hex : '#EA80FC'},
+  A200 : {hex : '#E040FB'},
+  A400 : {hex : '#D500F9'},
+  A700 : {hex : '#AA00FF'},
+};
+
+const DeepPurple: MaterialColorPalette = {
+  50 : {hex : '#EDE7F6'},
     100 : {hex : '#D1C4E9'},
     200 : {hex : '#B39DDB'},
     300 : {hex : '#9575CD'},
@@ -117,8 +85,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#7C4DFF'},
     A400 : {hex : '#651FFF'},
     A700 : {hex : '#6200EA'},
-  },
-  Indigo: {
+};
+
+const Indigo: MaterialColorPalette ={
     50 : {hex : '#E8EAF6'},
     100 : {hex : '#C5CAE9'},
     200 : {hex : '#9FA8DA'},
@@ -133,8 +102,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#536DFE'},
     A400 : {hex : '#3D5AFE'},
     A700 : {hex : '#304FFE'},
-  },
-  Blue: {
+  };
+
+const Blue: MaterialColorPalette = {
     50 : {hex : '#E3F2FD'},
     100 : {hex : '#BBDEFB'},
     200 : {hex : '#90CAF9'},
@@ -149,8 +119,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#448AFF'},
     A400 : {hex : '#2979FF'},
     A700 : {hex : '#2962FF'},
-  },
-  LightBlue: {
+  };
+
+const  LightBlue: MaterialColorPalette ={
     50 : {hex : '#E1F5FE'},
     100 : {hex : '#B3E5FC'},
     200 : {hex : '#81D4FA'},
@@ -165,8 +136,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#40C4FF'},
     A400 : {hex : '#00B0FF'},
     A700 : {hex : '#0091EA'},
-  },
-  Cyan: {
+  };
+
+ const Cyan: MaterialColorPalette = {
     50 : {hex : '#E0F7FA'},
     100 : {hex : '#B2EBF2'},
     200 : {hex : '#80DEEA'},
@@ -181,8 +153,10 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#18FFFF'},
     A400 : {hex : '#00E5FF'},
     A700 : {hex : '#00B8D4'},
-  },
-  Teal: {
+  };
+
+
+const  Teal: MaterialColorPalette ={
     50 : {hex : '#E0F2F1'},
     100 : {hex : '#B2DFDB'},
     200 : {hex : '#80CBC4'},
@@ -197,8 +171,10 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#64FFDA'},
     A400 : {hex : '#1DE9B6'},
     A700 : {hex : '#00BFA5'},
-  },
-  Green: {
+  };
+
+
+const  Green: MaterialColorPalette = {
     50 : {hex : '#E8F5E9'},
     100 : {hex : '#C8E6C9'},
     200 : {hex : '#A5D6A7'},
@@ -213,8 +189,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#69F0AE'},
     A400 : {hex : '#00E676'},
     A700 : {hex : '#00C853'},
-  },
-  LightGreen: {
+  };
+
+const  LightGreen: MaterialColorPalette = {
     50 : {hex : '#F1F8E9'},
     100 : {hex : '#DCEDC8'},
     200 : {hex : '#C5E1A5'},
@@ -229,8 +206,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#B2FF59'},
     A400 : {hex : '#76FF03'},
     A700 : {hex : '#64DD17'},
-  },
-  Lime: {
+  };
+
+const  Lime: MaterialColorPalette ={
     50 : {hex : '#F9FBE7'},
     100 : {hex : '#F0F4C3'},
     200 : {hex : '#E6EE9C'},
@@ -245,8 +223,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#EEFF41'},
     A400 : {hex : '#C6FF00'},
     A700 : {hex : '#AEEA00'},
-  },
-  Yellow: {
+  };
+
+const  Yellow: MaterialColorPalette ={
     50 : {hex : '#FFFDE7'},
     100 : {hex : '#FFF9C4'},
     200 : {hex : '#FFF59D'},
@@ -261,8 +240,10 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#FFFF00'},
     A400 : {hex : '#FFEA00'},
     A700 : {hex : '#FFD600'},
-  },
-  Amber: {
+  };
+
+
+const  Amber: MaterialColorPalette = {
     50 : {hex : '#FFF8E1'},
     100 : {hex : '#FFECB3'},
     200 : {hex : '#FFE082'},
@@ -277,8 +258,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#FFD740'},
     A400 : {hex : '#FFC400'},
     A700 : {hex : '#FFAB00'},
-  },
-  Orange: {
+  };
+
+const  Orange: MaterialColorPalette = {
     50 : {hex : '#FFF3E0'},
     100 : {hex : '#FFE0B2'},
     200 : {hex : '#FFCC80'},
@@ -293,8 +275,9 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#FFAB40'},
     A400 : {hex : '#FF9100'},
     A700 : {hex : '#FF6D00'},
-  },
-  DeepOrnage: {
+  };
+
+const  DeepOrange: MaterialColorPalette = {
     50 : {hex : '#FBE9E7'},
     100 : {hex : '#FFCCBC'},
     200 : {hex : '#FFAB91'},
@@ -309,8 +292,8 @@ export const MaterialColorPalettes = {
     A200 : {hex : '#FF6E40'},
     A400 : {hex : '#FF3D00'},
     A700 : {hex : '#DD2C00'},
-  },
-  Brown: {
+  };
+  const Brown: MaterialColorPalette = {
     50 : {hex : '#EFEBE9'},
     100 : {hex : '#D7CCC8'},
     200 : {hex : '#BCAAA4'},
@@ -321,8 +304,8 @@ export const MaterialColorPalettes = {
     700 : {hex : '#5D4037'},
     800 : {hex : '#4E342E'},
     900 : {hex : '#3E2723'},
-  },
-   Gray: {
+  };
+  const Gray:MaterialColorPalette = {
     50 : {hex : '#FAFAFA'},
     100 : {hex : '#F5F5F5'},
     200 : {hex : '#EEEEEE'},
@@ -333,8 +316,8 @@ export const MaterialColorPalettes = {
     700 : {hex : '#616161'},
     800 : {hex : '#424242'},
     900 : {hex : '#212121'},
-  },
-  BlueGray: {
+  };
+  const BlueGray: MaterialColorPalette = {
     50 : {hex : '#ECEFF1'},
     100 : {hex : '#CFD8DC'},
     200 : {hex : '#B0BEC5'},
@@ -345,8 +328,62 @@ export const MaterialColorPalettes = {
     700 : {hex : '#455A64'},
     800 : {hex : '#37474F'},
     900 : {hex : '#263238'},
+  };
+
+const MaterialColorPalettes: MaterialColorPalette[] =
+  [
+    Red,
+    Pink,
+    Purple,
+    DeepPurple,
+    Indigo,
+    Blue,
+    LightBlue,
+    Cyan,
+    Teal,
+    Green,
+    LightGreen,
+    Lime,
+    Yellow,
+    Amber,
+    Orange,
+    DeepOrange,
+    Brown,
+    Gray,
+    BlueGray
+  ];
+
+interface MaterialThemeColor {
+  palette: MaterialColorPalette;
+  id: '100' | '200' | '300' | '400' | '500' | '600' | '700' | '800' | '900' | 'A100' | 'A200' | 'A400' | 'A500'
+}
+
+interface AngularMaterialTheme {
+  name: string;
+  primary: MaterialThemeColor;
+  accent: MaterialThemeColor;
+}
+
+class AngularMaterialTheme implements AngularMaterialTheme{
+  name: string;
+  primary: MaterialThemeColor;
+  accent: MaterialThemeColor;
+
+  constructor(name:string, primary:MaterialThemeColor, accent:MaterialThemeColor){
+    this.name = name;
+    this.primary = primary;
+    this.accent = accent;
   }
+  getColor(string: 'primary' | 'accent'):string{
+    return this[string].palette[this.primary.id].hex
+  }
+}
 
-};
+const ArizonaTheme: AngularMaterialTheme = new AngularMaterialTheme('arizona', { palette: Brown, id: '400' }, {palette: Teal, id: '300'});
+const CorporateTheme: AngularMaterialTheme = new AngularMaterialTheme('corporate', { palette: BlueGray, id: '500' }, {palette: Gray, id: '400'});
+const LushTheme: AngularMaterialTheme = new AngularMaterialTheme('lush', { palette: Green, id: '800' }, {palette: LightGreen, id: '300'});
+const PirateTheme: AngularMaterialTheme = new AngularMaterialTheme('pirate', { palette: Gray, id: '900' }, {palette: Red, id: '900'});
+export const ThemeExt: string = '-theme';
 
+export const AngularMaterialThemes: AngularMaterialTheme[] =[ ArizonaTheme, CorporateTheme, LushTheme, PirateTheme];
 
