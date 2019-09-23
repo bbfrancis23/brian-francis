@@ -330,28 +330,11 @@ const  DeepOrange: MaterialColorPalette = {
     900 : {hex : '#263238'},
   };
 
-const MaterialColorPalettes: MaterialColorPalette[] =
-  [
-    Red,
-    Pink,
-    Purple,
-    DeepPurple,
-    Indigo,
-    Blue,
-    LightBlue,
-    Cyan,
-    Teal,
-    Green,
-    LightGreen,
-    Lime,
-    Yellow,
-    Amber,
-    Orange,
-    DeepOrange,
-    Brown,
-    Gray,
-    BlueGray
-  ];
+let MaterialColorPalettes: MaterialColorPalette[];
+
+MaterialColorPalettes = [
+  Red, Pink, Purple, DeepPurple, Indigo, Blue, LightBlue, Cyan, Teal, Green, LightGreen, Lime, Yellow, Amber, Orange, DeepOrange, Brown, Gray, BlueGray
+];
 
 interface MaterialThemeColor {
   palette: MaterialColorPalette;

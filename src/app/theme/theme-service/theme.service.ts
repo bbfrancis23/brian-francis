@@ -9,24 +9,23 @@ import {UnSubscriber} from '../../unsubscriber/unsubscriber';
 export class ThemeService extends UnSubscriber{
 
   private readonly _theme$: BehaviorSubject<string> = new BehaviorSubject<string>('corporate');
-  setTheme(theme:string){console.log(theme); this._theme$.next(theme);};
-  getTheme(): Observable<string>{ return this._theme$.asObservable();}
+
+  setTheme(theme:string){this._theme$.next(theme)};
+  getTheme(): Observable<string>{ return this._theme$.asObservable() }
 
   _lastTheme: string;
-  get lastTheme():string{ return this._lastTheme;}
-  set lastTheme(theme){this._lastTheme = theme;}
+  get lastTheme():string{ return this._lastTheme}
+  set lastTheme(theme){this._lastTheme = theme}
 
   constructor( private overlay: OverlayContainer) {
+
     super();
-    this.getTheme().subscribe( theme =>{
 
-      if(this.lastTheme){
-        this.removeLastTheme();
-      }
-      this.lastTheme = theme
-
+    this.subs.push( this.getTheme().subscribe( theme =>{
+      if(this.lastTheme){ this.removeLastTheme() }
+      this.lastTheme = theme;
       this.addTheme(theme);
-    });
+    }));
   }
 
   removeLastTheme(){

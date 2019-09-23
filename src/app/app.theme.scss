@@ -13,6 +13,7 @@
 
    div.page-wrapper{
      height: 100%;
+     width: 100vw;
    }
 
   button.settings-button{
@@ -50,15 +51,18 @@
 
   // paralax
   .pimg1{
-    background-image: url('./assets/parallax/corporate-1-parallax.jpg');
+    //noinspection CssUnknownTarget
+    background-image: url('./assets/theme/arizona/parallax/1.jpg');
     min-height: 100%;
   }
   .pimg2{
-    background-image: url('./assets/parallax/corporate-2-parallax.jpg');
+    //noinspection CssUnknownTarget
+    background-image: url('./assets/theme/arizona/parallax/2.jpg');
     min-height: 400px;
   }
   .pimg3{
-    background-image: url('./assets/parallax/corporate-3-parallax.jpg');
+    //noinspection CssUnknownTarget
+    background-image: url('./assets/theme/arizona/parallax/3.jpg');
     min-height: 400px;
   }
 

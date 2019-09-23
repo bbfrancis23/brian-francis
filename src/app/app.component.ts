@@ -7,13 +7,7 @@ import { AngularMaterialThemes} from './theme/angular-material-theme/angular-mat
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-   themes = AngularMaterialThemes;
-
-  constructor( public themeService: ThemeService ) {
-
-  }
-
-
-
+  themes = AngularMaterialThemes;
+  constructor( public themeService: ThemeService ) {}
 }
 
