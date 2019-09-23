@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { ThemeModule } from './theme/theme.module';
+import { ParallaxModule } from './parallax/parallax.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ThemeModule } from './theme/theme.module';
     MatListModule,
     ThemeModule,
     MatMenuModule,
-    MatGridListModule
+    MatGridListModule,
+    ParallaxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

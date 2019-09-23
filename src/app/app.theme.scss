@@ -4,17 +4,13 @@
 
   // theme variables
   $theme-foreground: map-get($theme, foreground);
+  $theme-background: map-get($theme, background);
 
   // app-theme variables
   $app-button-spacing: 20px;
   $theme-tile-size: 50px;
   $swatch-radius: 25px;
   $swatch-hover-growth: 1%;
-
-   div.page-wrapper{
-     height: 100%;
-     width: 100vw;
-   }
 
   button.settings-button{
     position: fixed;
@@ -49,7 +45,7 @@
     border-radius: $swatch-radius;
   }
 
-  // paralax
+  // parallax
   .pimg1{
     //noinspection CssUnknownTarget
     background-image: url('./assets/theme/arizona/parallax/1.jpg');

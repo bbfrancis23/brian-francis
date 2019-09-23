@@ -8,9 +8,11 @@
 
 // custom component theming
 @import 'app/app.theme.scss';
+@import 'app/parallax/parallax/parallax.theme.scss';
 
 @mixin custom-components-theme($theme) {
   @include  app-theme($theme);
+  @include  parallax-theme($theme);
 }
 
 .arizona-theme{
