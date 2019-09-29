@@ -8,12 +8,15 @@ export class ParallaxRowComponent implements OnInit {
   @Input() img:string;
   @Input() height:string;
   @Input() parallax:boolean;
+  @Input() color:boolean;
+  @Input() accent: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.height = this.height || '100%';
     this.parallax = this.parallax ? this.parallax : !!this.img;
+    this.color = this.color ? this.color : false;
+    this.accent= this.accent ? this.accent : false;
   }
-
 }

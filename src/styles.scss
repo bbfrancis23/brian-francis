@@ -8,8 +8,7 @@
 
 // custom component theming
 @import 'app/app.theme.scss';
-@import 'app/parallax/parallax/parallax.theme.scss';
-@import 'app/parallax/parallax-row/parallax-row.theme.scss';
+@import 'app/parallax/parallax.theme';
 
 @mixin custom-components-theme($theme) {
   @include  app-theme($theme);
