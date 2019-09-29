@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@mixin parallax-row-theme($theme) {
+  .parallax-img-row{
+
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+  }
+}

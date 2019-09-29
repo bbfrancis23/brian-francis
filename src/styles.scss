@@ -9,10 +9,12 @@
 // custom component theming
 @import 'app/app.theme.scss';
 @import 'app/parallax/parallax/parallax.theme.scss';
+@import 'app/parallax/parallax-row/parallax-row.theme.scss';
 
 @mixin custom-components-theme($theme) {
   @include  app-theme($theme);
   @include  parallax-theme($theme);
+  @include  parallax-row-theme($theme);
 }
 
 .arizona-theme{
@@ -40,32 +42,15 @@ body, html{
   height: 100%;
   width: 100%;
   margin: 0;
-  //font-size: 16px;
-  //font-family: "lato", sans-serif;
-  //font-weight: 400;
-  //line-height: 1.8em;
-  //color: #666;
 }
 
 span.large {
-
 
     color: transparent;
     font-size: 100px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;
-  }
-
-.pimg1, .pimg2, .pimg3{
-  position: relative;
-  opacity: 0.70;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
-
-
 
 .ptext{
   position: absolute;

@@ -1,0 +1,7 @@
+<div  [ngClass]="{'parallax-img-row': parallax}" [style.background-image]="'url('+img+')'" [style.height]="height" *ngIf="parallax">
+  <ng-content></ng-content>
+</div>
+<div *ngIf="!parallax">
+ <ng-content></ng-content>
+</div>
+
