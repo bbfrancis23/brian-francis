@@ -1,15 +1,7 @@
 @import '../../../node_modules/@angular/material/theming';
 
 @mixin parallax-theme($theme) {
-
-  // theme variables
-  $theme-background: map-get($theme, background);
-
-
-  div.parallax-container{
-    height: 100%;
-  }
-
+  div.parallax-container{ height: 100% }
 }
 
 @mixin parallax-row-theme($theme) {
@@ -19,52 +11,37 @@
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
 
+  // component variables
+
   .parallax-img-row{
     position: relative;
-    //opacity: 0.70;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: rgba(256,256,256,.0);
-    //z-index: 0;
   }
 
+  .parallax-row{ background: mat-color($theme-background, background) }
 
-  .parallax-row{
-    background: mat-color($theme-background, background);
-  }
+  .parallax-row-primary{ background: mat-color($primary)  }
 
-  .parallax-row-primary{
-    background: mat-color($primary);
-  }
-
-  .parallax-row-accent{
-    background: mat-color($accent);
-  }
+  .parallax-row-accent{ background: mat-color($accent)  }
 
   .parallax-img{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    //background-color: rgba(256,256,256,.0);
-
+    @extend .parallax-img-row;
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: .70;
-    background-color:  white;
-    //z-index: -2;
+    opacity: .7;
+    background-color:  mat-color($theme-background, background);
   }
 
   .overlay{
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: .70;
-    //background-color:  white;
-    //z-index: -2;
+    opacity: .7;
+    background-color:  mat-color($theme-background, background);
   }
 
   div.overlay-primary{

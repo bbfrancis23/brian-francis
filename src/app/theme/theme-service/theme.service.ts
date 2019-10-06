@@ -23,7 +23,6 @@ export class ThemeService extends UnSubscriber{
     super();
 
     this.subs.push( this.getTheme().subscribe( theme =>{
-
       if(theme){
         if(this.lastTheme){ this.removeLastTheme() }
         this.lastTheme = theme;
@@ -33,8 +32,6 @@ export class ThemeService extends UnSubscriber{
         if(!theme){ theme = AngularMaterialThemes[0].name }
         this.setTheme(theme);
       }
-
-
     }));
 
 
@@ -50,8 +47,6 @@ export class ThemeService extends UnSubscriber{
     const themeTitle = `${theme}-theme`;
     this.overlay.getContainerElement().classList.add(themeTitle);
     document.body.classList.add(themeTitle);
-
-
 
     localStorage.setItem('theme',theme);
   }
