@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ParallaxComponent } from './parallax/parallax.component';
+import { ParallaxComponent } from './parallax.component';
 import { ParallaxRowComponent } from './parallax-row/parallax-row.component';
 
 @NgModule({

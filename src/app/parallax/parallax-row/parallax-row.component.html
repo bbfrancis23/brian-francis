@@ -1,7 +1,7 @@
 <div  [ngClass]="{'parallax-img-row': parallax}"  [style.height]="height" *ngIf="parallax">
   <div class="parallax-img" [style.background-image]="'url('+img+')'" ></div>
   <div [ngClass]="{'overlay-primary': (color && !accent) , 'overlay-accent' : (color && accent) }"></div>
-  <ng-content select="ng-container" *ngIf="parallax" ></ng-content>
+  <ng-content select="[parallax=true]" *ngIf="parallax" ></ng-content>
 </div>
 
 

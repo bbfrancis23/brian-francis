@@ -13,7 +13,11 @@
     <mat-icon >invert_colors</mat-icon>
   </button>
 
-  <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/primary.jpg'" color="true"></parallax-row>
+  <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/primary.jpg'" color="true" >
+    <ng-container parallax="true" >
+
+    </ng-container>
+  </parallax-row>
   <parallax-row color="true"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>
   <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/support-0.jpg'" ></parallax-row>
   <parallax-row color="true" accent="true"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>

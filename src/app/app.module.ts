@@ -16,6 +16,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 
 import { ThemeModule } from './theme/theme.module';
 import { ParallaxModule } from './parallax/parallax.module';
+import { HeadingModule } from './heading/heading.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ParallaxModule } from './parallax/parallax.module';
     ThemeModule,
     MatMenuModule,
     MatGridListModule,
-    ParallaxModule
+    ParallaxModule,
+    HeadingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
