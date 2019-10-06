@@ -1,8 +1,12 @@
-<div  [ngClass]="{'parallax-img-row': parallax}" [style.background-image]="'url('+img+')'" [style.height]="height" *ngIf="parallax">
-  <div [ngClass]="{'overlay': (color && !accent) , 'overlay-accent' : (color && accent)}"></div>
-  <ng-content></ng-content>
-</div>
-<div [ngClass]="{'parallax-row' : (!color), 'parallax-row-primary': (color && !accent), 'parallax-row-accent': (color && accent)}" *ngIf="!parallax">
- <ng-content></ng-content>
+<div  [ngClass]="{'parallax-img-row': parallax}"  [style.height]="height" *ngIf="parallax">
+  <div class="parallax-img" [style.background-image]="'url('+img+')'" ></div>
+  <div [ngClass]="{'overlay-primary': (color && !accent) , 'overlay-accent' : (color && accent) }"></div>
+  <ng-content select="ng-container" *ngIf="parallax" ></ng-content>
 </div>
 
+
+<div [ngClass]="{'parallax-row' : (!color), 'parallax-row-primary': (color && !accent), 'parallax-row-accent': (color && accent)}" *ngIf="!parallax">
+ NO PARALLAX<ng-content></ng-content>
+</div>
+
+<!-- -->

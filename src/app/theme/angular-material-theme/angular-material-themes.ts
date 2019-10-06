@@ -368,5 +368,5 @@ const LushTheme: AngularMaterialTheme = new AngularMaterialTheme('lush', { palet
 const PirateTheme: AngularMaterialTheme = new AngularMaterialTheme('pirate', { palette: Gray, id: '900' }, {palette: Red, id: '900'});
 export const ThemeExt: string = '-theme';
 
-export const AngularMaterialThemes: AngularMaterialTheme[] =[ ArizonaTheme, CorporateTheme, LushTheme, PirateTheme];
+export const AngularMaterialThemes: AngularMaterialTheme[] =[ CorporateTheme, ArizonaTheme,  LushTheme, PirateTheme];
 
