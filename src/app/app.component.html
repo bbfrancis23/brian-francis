@@ -3,7 +3,7 @@
   <mat-menu #themesMenu overlapTrigger >
     <mat-grid-list cols="2">
       <mat-grid-tile *ngFor="let theme of themes">
-        <div class="theme-tile" [ngClass]="{'theme-tile-active': (themeService.getTheme() | async) === theme.name}" mat-menu-item role="menuitem" (click)="themeService.setTheme(theme.name)">
+        <div class="choose-theme-tile" [ngClass]="{'choose-theme-tile-active': (themeService.getTheme() | async) === theme.name}" mat-menu-item role="menuitem" (click)="themeService.setTheme(theme.name)">
           <div class="swatch" [style.background]="'linear-gradient(-45deg, '+theme.getColor('primary')+' 35%,  '+theme.getColor('accent')+' 100%)'"></div>
         </div>
       </mat-grid-tile>

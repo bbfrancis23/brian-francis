@@ -19,14 +19,14 @@
     z-index: 1;
   }
 
-  .theme-tile{
+  .choose-theme-tile{
     width: $theme-tile-size;
     height: $theme-tile-size;
     padding: 5px;
   }
 
-  .theme-tile-active{
-    @extend .theme-tile;
+  .choose-theme-tile-active{
+    @extend .choose-theme-tile;
     border: 2px solid mat-color($theme-foreground, text);
     //-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
     box-shadow: 0 1px 2px rgba(0,0,0,0.5);
@@ -44,23 +44,4 @@
     height: 100% + $swatch-hover-growth;
     border-radius: $swatch-radius;
   }
-
-  // parallax
-  .pimg1{
-    //noinspection CssUnknownTarget
-    background-image: url('./assets/theme/arizona/parallax/primary.jpg');
-    min-height: 100%;
-  }
-  .pimg2{
-    //noinspection CssUnknownTarget
-    background-image: url('./assets/theme/arizona/parallax/support-0.jpg');
-    min-height: 400px;
-  }
-  .pimg3{
-    //noinspection CssUnknownTarget
-    background-image: url('./assets/theme/arizona/parallax/support-1.jpg');
-    min-height: 400px;
-  }
-
-
 }
