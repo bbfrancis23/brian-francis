@@ -5,6 +5,6 @@
 </div>
 
 
-<div [ngClass]="{'parallax-row' : (!color), 'parallax-row-primary': (color && !accent), 'parallax-row-accent': (color && accent)}" *ngIf="!parallax">
+<div [ngClass]="{'parallax-row' : (!color), 'parallax-row-primary': (color && !accent), 'parallax-row-accent': (color && accent)}" *ngIf="!parallax" [style.height]="height">
  NO PARALLAX<ng-content></ng-content>
 </div>

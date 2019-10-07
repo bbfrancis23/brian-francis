@@ -14,7 +14,7 @@ export class ParallaxRowComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.height = this.height || '100%';
+    this.height = this.height || '100vh';
     this.parallax = this.parallax ? this.parallax : !!this.img;
     this.color = this.color ? this.color : false;
     this.accent= this.accent ? this.accent : false;

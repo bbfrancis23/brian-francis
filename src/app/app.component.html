@@ -13,17 +13,15 @@
     <mat-icon >invert_colors</mat-icon>
   </button>
 
-  <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/primary.jpg'" color="true" >
-    <ng-container parallax="true" >
-
-    </ng-container>
+  <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/primary.jpg'" color="true">
+    <ng-container parallax="true" ><heading></heading></ng-container>
   </parallax-row>
-  <parallax-row color="true"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>
+  <parallax-row color="true" [height]="'100%'" ></parallax-row>
   <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/support-0.jpg'" ></parallax-row>
   <parallax-row color="true" accent="true"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>
   <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/support-1.jpg'" [height]="'400px'"></parallax-row>
   <parallax-row  ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>
-  <parallax-row  ><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>
+  <parallax-row  [img]="'./assets/theme/'+(themeService.getTheme() | async)+'/parallax/primary.jpg'"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></parallax-row>
 
 
 </parallax>

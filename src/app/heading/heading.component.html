@@ -1,1 +1,34 @@
-<p>heading works!</p>
+<mat-grid-list cols="11" rowHeight="12.5vh" gutterSize="0px">
+  <mat-grid-tile colspan="11" rowspan="1" ></mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="6" ></mat-grid-tile>
+  <mat-grid-tile class="hero" colspan="3" rowspan="5" >
+    <img class="hero" src="./assets/img/brian-francis.jpg" alt="Brian Francis">
+  </mat-grid-tile>
+  <mat-grid-tile colspan="6" rowspan="3"></mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="6" ></mat-grid-tile>
+  <mat-grid-tile colspan="6" rowspan="3" ></mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="1" ></mat-grid-tile>
+  <mat-grid-tile colspan="11" rowspan="1" ></mat-grid-tile>
+</mat-grid-list>
+
+<!--<div style="z-index: 1; position: absolute; top: 0; right:0">-->
+<!--  <span class="large">Brian Francis</span><br>-->
+<!-- <span class="large">Angular Specialist</span>-->
+<!--</div>-->
+
+<mat-grid-list cols="11" rowHeight="12.5vh" gutterSize="0px" style="z-index: 1; position: absolute; top: 0px; left:0px; width:100%">
+  <mat-grid-tile colspan="11" rowspan="1" ></mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="6" ></mat-grid-tile>
+  <mat-grid-tile colspan="9" rowspan="3" >
+    <div style="position: absolute; right: 5px; top: 5px">
+      <span class="large" >Brian Francis</span><br><br>
+
+    </div>
+    <div style="position: absolute; right: 5px; top: 10vw">
+      <span class="large-outline">Angular Specialist</span>
+    </div>
+
+<!--    <span class="large">Angular Specialist</span>-->
+  </mat-grid-tile>
+
+</mat-grid-list>
