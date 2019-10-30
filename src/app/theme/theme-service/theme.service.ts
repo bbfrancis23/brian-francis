@@ -9,10 +9,10 @@ import {AngularMaterialThemes} from '../angular-material-theme/angular-material-
 })
 export class ThemeService extends UnSubscriber{
 
-  private readonly _theme$: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private readonly _theme: BehaviorSubject<string> = new BehaviorSubject<string>(null);
 
-  setTheme(theme:string){this._theme$.next(theme)};
-  getTheme(): Observable<string>{ return this._theme$.asObservable() }
+  setTheme(theme:string){this._theme.next(theme)};
+  getTheme(): Observable<string>{ return this._theme.asObservable() }
 
   _lastTheme: string;
   get lastTheme():string{ return this._lastTheme}
@@ -22,7 +22,8 @@ export class ThemeService extends UnSubscriber{
 
     super();
 
-    this.subs.push( this.getTheme().subscribe( theme =>{
+    this.subs.push(
+      this.getTheme().subscribe( theme =>{
       if(theme){
         if(this.lastTheme){ this.removeLastTheme() }
         this.lastTheme = theme;
@@ -32,8 +33,8 @@ export class ThemeService extends UnSubscriber{
         if(!theme){ theme = AngularMaterialThemes[0].name }
         this.setTheme(theme);
       }
-    }));
-
+     })
+    );
 
   }
 

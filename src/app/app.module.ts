@@ -9,6 +9,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import {MatGridListModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,7 +37,8 @@ import { SectionModule } from './section/section.module';
     MatMenuModule,
     MatGridListModule,
     ParallaxModule,
-    SectionModule
+    SectionModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
