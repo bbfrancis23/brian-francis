@@ -1,21 +1,20 @@
 <mat-grid-list [cols]="gridList.cols" rowHeight="{{gridList.rowHeight}}vh" [gutterSize]="gridList.gutterSize">
-  <mat-grid-tile [colspan]="gridList.cols" rowspan="1"  ></mat-grid-tile>
-  <mat-grid-tile colspan="1" [rowspan]="contentRows" ></mat-grid-tile>
+  <mat-grid-tile [colspan]="gridList.cols" ></mat-grid-tile>
+  <mat-grid-tile [rowspan]="contentRows" ></mat-grid-tile>
   <mat-grid-tile  [colspan]="3" [rowspan]="contentRows" >
     <img class="hero" src="./assets/img/bf-test3.jpg" alt="Brian Francis" >
   </mat-grid-tile>
   <mat-grid-tile colspan="6" [rowspan]="contentRows" > </mat-grid-tile>
-  <mat-grid-tile colspan="1" [rowspan]="contentRows" ></mat-grid-tile>
-  <mat-grid-tile [colspan]="gridList.cols" rowspan="1" ></mat-grid-tile>
+  <mat-grid-tile [rowspan]="contentRows" ></mat-grid-tile>
+  <mat-grid-tile [colspan]="gridList.cols" ></mat-grid-tile>
 </mat-grid-list>
 
 
 <mat-grid-list class="header-layer" [cols]="gridList.cols" rowHeight="{{gridList.rowHeight}}vh" [gutterSize]="gridList.gutterSize" >
-  <mat-grid-tile [colspan]="gridList.cols" rowspan="1" ></mat-grid-tile>
-  <mat-grid-tile colspan="1" [rowspan]="contentRows" ></mat-grid-tile>
+  <mat-grid-tile [colspan]="gridList.cols" ></mat-grid-tile>
+  <mat-grid-tile [rowspan]="contentRows" ></mat-grid-tile>
   <mat-grid-tile [colspan]="contentCols" rowspan="3" >
-    <div class="heading"><span >Brian Francis</span></div>
-
-    <div class="subheading" style=""><span >Angular Specialist</span></div>
+    <div class="heading"><h1 >Brian Francis</h1></div>
+    <div class="subheading" style=""><h2 >Angular Specialist</h2></div>
   </mat-grid-tile>
 </mat-grid-list>

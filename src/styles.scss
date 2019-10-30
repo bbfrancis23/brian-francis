@@ -9,7 +9,7 @@
 // custom component theming
 @import 'app/app.theme';
 @import 'app/parallax/parallax.theme';
-@import 'app/heading/heading.theme';
+@import 'app/section/section.theme.scss';
 
 @mixin custom-components-theme($theme) {
   @include  app-theme($theme);
@@ -44,3 +44,6 @@ body, html{
   margin: 0;
 }
 
+.display-block.mat-grid-tile .mat-figure{
+  display: block
+}

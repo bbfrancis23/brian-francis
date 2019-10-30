@@ -1,0 +1,32 @@
+<mat-grid-list [cols]="gridList.cols" rowHeight="{{gridList.rowHeight}}vh" [gutterSize]="gridList.gutterSize">
+  <mat-grid-tile [colspan]="gridList.cols"  ></mat-grid-tile>
+  <mat-grid-tile colspan="1" [rowspan]="contentRows" ></mat-grid-tile>
+
+  <mat-grid-tile  [colspan]="contentCols" rowspan="2">
+    <h3 class="section-heading">SKILLS</h3>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="(contentCols / 3)" style="border: 1px solid green">
+    <div>
+      <h4 style="border: 1px solid blue; display: inline-block; width: 100%">PROGRAMMING</h4>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="(contentCols / 3)" style="border: 1px solid green">
+    <h4>SOFTWARE</h4>
+  </mat-grid-tile>
+  <mat-grid-tile [colspan]="(contentCols / 3)" style="border: 1px solid green">
+    <h4>PROFESSIONAL</h4>
+  </mat-grid-tile>
+  <mat-grid-tile class="display-block" [colspan]="(contentCols / 3)" [rowspan]="contentRows" style="border: 1px solid blue">
+
+
+      <div style="display: flex;">
+        <span>Java Script</span><span style="flex: 1 1 auto"></span><span>85%</span>
+      </div>
+    <div style="display: flex; width: 100%">
+      <span>Java Script</span><span style="flex: 1 1 auto"></span><span>85%</span>
+    </div>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" [rowspan]="contentRows" ></mat-grid-tile>
+  <mat-grid-tile [colspan]="gridList.cols"  ></mat-grid-tile>
+</mat-grid-list>
+
